@@ -13,6 +13,8 @@ import { IdeasComponent } from './ideas/ideas/ideas.component';
 import { MyIdeasComponent } from './ideas/my-ideas/my-ideas.component';
 import { AddNewIdeaComponent } from './ideas/add-new-idea/add-new-idea.component';
 import { DonateComponent } from './ideas/donate/donate/donate.component';
+import { HeaderComponent } from './navigation/header/header.component';
+import { SidebarComponent } from './navigation/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { DonateComponent } from './ideas/donate/donate/donate.component';
     MyIdeasComponent,
     AddNewIdeaComponent,
     DonateComponent,
+    HeaderComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,

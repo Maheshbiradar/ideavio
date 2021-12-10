@@ -8,6 +8,10 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   imports: [
@@ -21,6 +25,11 @@ import { MatDividerModule } from '@angular/material/divider';
     MatCardModule,
     MatDividerModule,
     MatDividerModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatListModule,
   ],
   exports: [
     MatSliderModule,
@@ -32,6 +41,11 @@ import { MatDividerModule } from '@angular/material/divider';
     MatCheckboxModule,
     MatCardModule,
     MatDividerModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatListModule,
   ],
 })
 export class MaterialModule {}
