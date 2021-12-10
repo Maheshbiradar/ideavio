@@ -1,1 +1,73 @@
-<p>sign-up works!</p>
+<section class="signup-form" fxLayout="column" fxLayoutAlign="center center">
+  <mat-card>
+    <form
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      #f="ngForm"
+      fxLayoutGap="10px"
+      (ngSubmit)="onSubmit(f)"
+    >
+      <h2>Sign Up</h2>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your email</mat-label>
+        <input
+          matInput
+          type="email"
+          placeholder="email@example.com"
+          required
+          name="email"
+          ngModel
+          email
+          #emailInput="ngModel"
+        />
+        <mat-error *ngIf="emailInput.hasError('required')"
+          >Email field is required.</mat-error
+        >
+        <mat-error *ngIf="emailInput.hasError('email')"
+          >Email field is invalid.</mat-error
+        >
+      </mat-form-field>
+      <mat-form-field appearance="fill" hintLabel="Min 6 characters">
+        <mat-label>Enter your password</mat-label>
+        <input
+          matInput
+          placeholder="password"
+          required
+          type="password"
+          minlength="6"
+          name="password"
+          ngModel
+          #passwordInput="ngModel"
+        />
+        <mat-hint align="end"
+          >{{ passwordInput.value?.length || 0 }}/6</mat-hint
+        >
+        <mat-error>Has to be at least 6 characters long.</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Enter birthdate"
+          [matDatepicker]="picker"
+          ngModel
+          name="birthdate"
+          required
+          #dateInput="ngModel"
+        />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="dateInput.hasError('required')"
+          >Birth Date field is required.</mat-error
+        >
+      </mat-form-field>
+
+      <mat-checkbox ngModel name="agree" required color="primary"
+        >Agree to Terms and Conditions.</mat-checkbox
+      >
+      <button mat-raised-button color="primary" [disabled]="f.invalid">
+        Submit
+      </button>
+    </form>
+  </mat-card>
+</section>
