@@ -1,5 +1,7 @@
 <section class="signup-form" fxLayout="column" fxLayoutAlign="center center">
-  <mat-card>
+  <mat-card fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+    <mat-label>Have an account? <a routerLink="/login">Log in</a></mat-label>
+    <mat-divider></mat-divider>
     <form
       fxLayout="column"
       fxLayoutAlign="center center"
@@ -69,5 +71,12 @@
         Submit
       </button>
     </form>
+    <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="5px">
+      <mat-divider fxFlex="1 0"></mat-divider>
+      <div>or</div>
+      <mat-divider fxFlex="1 0"></mat-divider>
+    </div>
+
+    <button mat-raised-button>Sign in with Google</button>
   </mat-card>
 </section>

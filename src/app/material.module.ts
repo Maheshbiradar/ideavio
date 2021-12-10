@@ -20,6 +20,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatCheckboxModule,
     MatCardModule,
     MatDividerModule,
+    MatDividerModule,
   ],
   exports: [
     MatSliderModule,

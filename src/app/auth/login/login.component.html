@@ -1,5 +1,5 @@
 <section class="login-form" fxLayout="column" fxLayoutAlign="center center">
-  <mat-card>
+  <mat-card fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
     <form
       [formGroup]="loginForm"
       fxLayout="column"
@@ -36,5 +36,15 @@
         Login
       </button>
     </form>
+    <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="5px">
+      <mat-divider fxFlex="1 0"></mat-divider>
+      <div>or</div>
+      <mat-divider fxFlex="1 0"></mat-divider>
+    </div>
+    <button mat-raised-button>Sign in with Google</button>
+    <mat-divider fxFlex="1 0"></mat-divider>
+    <mat-label
+      >New to Kickstarter? <a routerLink="/signup">Sign up</a></mat-label
+    >
   </mat-card>
 </section>
